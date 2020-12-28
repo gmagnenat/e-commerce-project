@@ -39,7 +39,7 @@
         height: 12px;
         padding: 10px;
         border: none;
-        width: 100%;
+        width: 80%;
         &:focus {
             outline: transparent;
         }
@@ -52,6 +52,11 @@
     }
 
     &__option {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        margin-right: 10px;
+        color: white;
         &LineOne {
             font-size: 10px;
         }
@@ -61,12 +66,18 @@
         }
         &Basket {
             display: flex;
+            position: relative;
+            margin-right: 4rem;
             align-items: center;
             color: white;
         }
     }
 
     &__basketCount {
+        position: absolute;
+        top: 0;
+        text-align: left;
+        right: -3rem;
         margin-left: 10px;
         margin-right: 10px;
     }
@@ -74,13 +85,5 @@
     &__nav {
         display: flex;
         justify-content: space-evenly;
-    }
-
-    &__option {
-        display: flex;
-        flex-direction: column;
-        margin-left: 10px;
-        margin-right: 10px;
-        color: white;
     }
 }

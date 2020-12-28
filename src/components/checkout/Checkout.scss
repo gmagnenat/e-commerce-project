@@ -6,8 +6,13 @@
     background-color: white;
     height: max-content;
 
+    &__left {
+        width: 60%;
+    }
+
     &__title {
         margin-right: 10px;
+        margin-bottom: 2rem;
         padding: 10px;
         border-bottom: 1px solid lightgray;
     }

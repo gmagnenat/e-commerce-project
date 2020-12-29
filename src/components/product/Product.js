@@ -4,7 +4,6 @@ import Button from '@material-ui/core/Button';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import './Product.scss';
 import { useStateValue } from '../../StateProvider';
-import { initialState } from '../../reducer';
 
 function Product({ id, title, image, price, rating, description, category }) {
     const [state, dispatch] = useStateValue();
@@ -13,13 +12,13 @@ function Product({ id, title, image, price, rating, description, category }) {
         dispatch({
             type: 'ADD_TO_BASKET',
             item: {
-                id,
-                title,
-                image,
-                price,
-                rating,
-                description,
-                category,
+                id: id,
+                title: title,
+                image: image,
+                price: price,
+                rating: rating,
+                description: description,
+                category: category,
             },
         });
     };

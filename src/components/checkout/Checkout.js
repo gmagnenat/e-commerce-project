@@ -13,20 +13,32 @@ function Checkout() {
                 <div>
                     <h2 className="checkout__title">Your shopping Basket</h2>
                     {basket.map(
-                        ({ title, image, price, description, category }, i) => {
+                        (
+                            {
+                                id,
+                                title,
+                                image,
+                                price,
+                                description,
+                                category,
+                                rating,
+                            },
+                            i
+                        ) => {
                             return (
                                 <CheckoutProduct
+                                    id={id}
                                     key={i}
                                     title={title}
                                     image={image}
                                     price={price}
                                     description={description}
                                     category={category}
+                                    rating={rating}
                                 />
                             );
                         }
                     )}
-                    {/* <BasketItem title="hello" /> */}
                 </div>
             </div>
 

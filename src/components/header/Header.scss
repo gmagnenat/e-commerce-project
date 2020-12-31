@@ -2,26 +2,15 @@
     height: 60px;
     display: flex;
     align-items: center;
-    background: #00c6ff; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-        to left,
-        #0072ff,
-        #00c6ff
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-        to left,
-        #0072ff,
-        #00c6ff
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: #002c55;
 
     position: sticky;
     top: 0;
     z-index: 100;
 
     &__logo {
-        width: 60px;
-        object-fit: contain;
         margin: 0 20px;
+        color: white;
 
         &:hover {
             border-radius: 3px;

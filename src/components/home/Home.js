@@ -1,6 +1,7 @@
 import React from 'react';
 import Product from '../product/Product';
 import shopData from '../../shop-data';
+import Banner from '../banner/Banner';
 import './Home.scss';
 
 function Home() {
@@ -26,14 +27,16 @@ function Home() {
             });
     };
     return (
-        <div className="home">
-            <div className="home__container">
-                <div className="home__slider"></div>
-                <div className="home__row">{sliceData(shopData, 0, 2)}</div>
-                <div className="home__row">{sliceData(shopData, 2, 5)}</div>
-                <div className="home__row">{sliceData(shopData, 5, 6)}</div>
+        <>
+            <Banner />
+            <div className="home">
+                <div className="home__container">
+                    <div className="home__row">{sliceData(shopData, 0, 2)}</div>
+                    <div className="home__row">{sliceData(shopData, 2, 5)}</div>
+                    <div className="home__row">{sliceData(shopData, 5, 6)}</div>
+                </div>
             </div>
-        </div>
+        </>
     );
 }
 

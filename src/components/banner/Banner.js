@@ -6,10 +6,10 @@ function Banner() {
         <div className="banner">
             <div className="banner__text-box">
                 <div className="heading-primary heading-primary--main">
-                    Title
+                    Flow
                 </div>
                 <div className="heading-primary heading-primary--sub">
-                    Subtitle
+                    dressed in style
                 </div>
             </div>
         </div>

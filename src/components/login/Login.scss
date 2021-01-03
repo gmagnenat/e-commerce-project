@@ -48,7 +48,7 @@
             margin-bottom: 20px;
         }
 
-        form {
+        .form {
             display: flex;
             flex-direction: column;
 
@@ -57,10 +57,21 @@
                 font-size: 1.3rem;
             }
 
-            button {
+            &__signinButton {
                 width: 60%;
                 margin: 2rem auto;
             }
+
+            &__registerButton {
+                width: 100%;
+                margin: 0 auto;
+                margin-top: 2rem;
+            }
+        }
+
+        &__terms {
+            margin-top: 15px;
+            font-size: 1rem;
         }
     }
 }

@@ -3,6 +3,7 @@ import './App.css';
 import Home from './components/home/Home';
 import Header from './components/header/Header';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Payment from './components/payment/Payment';
 import Checkout from './components/checkout/Checkout';
 import Login from './components/login/Login';
 import { auth } from './firebase';
@@ -14,8 +15,6 @@ function App() {
     useEffect(() => {
         // will only run once when the app component loads...
         auth.onAuthStateChanged((authUser) => {
-            console.log('THE USER IS >>>> ', authUser);
-
             if (authUser) {
                 // The user just logged in / the user was logged in
                 dispatch({
@@ -42,6 +41,11 @@ function App() {
                     <Route path="/checkout">
                         <Header />
                         <Checkout />
+                    </Route>
+                    <Route path="/payment">
+                        <Header />
+                        <Payment />
+                        <h1>I am the payment route</h1>
                     </Route>
                     <Route path="/">
                         <Header />

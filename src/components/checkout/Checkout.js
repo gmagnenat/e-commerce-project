@@ -1,5 +1,6 @@
 import React from 'react';
 import './Checkout.scss';
+import FlipMove from 'react-flip-move';
 import Subtotal from '../subtotal/Subtotal';
 import CheckoutProduct from '../checkoutProduct/CheckoutProduct';
 import { useStateValue } from '../../StateProvider';
@@ -13,6 +14,7 @@ function Checkout() {
                     <h2 className="checkout__title">
                         Hey {user?.email}, here is your shopping basket
                     </h2>
+
                     {basket.map(
                         (
                             {

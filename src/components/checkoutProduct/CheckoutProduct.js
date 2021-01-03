@@ -10,7 +10,6 @@ const CheckoutProduct = (product) => {
     const [{ basket }, dispatch] = useStateValue();
 
     const removeFromBasket = () => {
-        console.log(title);
         dispatch({
             type: 'REMOVE_FROM_BASKET',
             id: id,

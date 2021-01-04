@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Payment.css';
-import axios from 'axios';
+import instance from '../../axios';
 import { useStateValue } from '../../StateProvider';
 import CheckoutProduct from '../checkoutProduct/CheckoutProduct';
 import { Link, useHistory } from 'react-router-dom';
@@ -10,7 +10,7 @@ import { getBasketTotal } from '../../reducer';
 
 function Payment() {
     const [{ basket, user }, dispatch] = useStateValue();
-    const history = useHistory;
+    const history = useHistory();
 
     const stripe = useStripe();
     const elements = useElements();
@@ -23,18 +23,26 @@ function Payment() {
 
     useEffect(() => {
         // generate the stripe secret which allows us to change a customer
-
         const getClientSecret = async () => {
-            const response = await axios({
-                method: 'post',
-                // Stripe expects the total in a currencies subunits
-                url: `/payments/create?total=${getBasketTotal(basket) * 100}`,
-            });
-            setClientSecret(response.data.clientSecret);
+            try {
+                const response = await instance({
+                    method: 'post',
+                    // Stripe expects the total in a currencies subunits
+                    url: `/payments/create?total=${
+                        getBasketTotal(basket) * 100
+                    }`,
+                });
+                console.log('The response >>>>>', response);
+                setClientSecret(response.data.clientSecret);
+            } catch (err) {
+                console.error(err);
+            }
         };
 
         getClientSecret();
     }, [basket]);
+
+    console.log('THE SECRET IS >>>', clientSecret);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -46,7 +54,7 @@ function Payment() {
                     card: elements.getElement(CardElement),
                 },
             })
-            .then(({ paymentIntent }) => {
+            .then(({ paymenIntent }) => {
                 setSucceeded(true);
                 setError(null);
                 setProcessing(false);
@@ -55,7 +63,10 @@ function Payment() {
             });
     };
 
-    const handleChange = (e) => {};
+    const handleChange = (event) => {
+        setDisabled(event.empty);
+        setError(event.error ? event.error.message : '');
+    };
 
     return (
         <div className="payment">

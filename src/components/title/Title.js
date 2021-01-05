@@ -1,10 +1,10 @@
 import React from 'react';
-import './Banner.css';
+import './Title.css';
 
-function Banner() {
+function Title() {
     return (
-        <div className="banner">
-            <div className="banner__text-box">
+        <div className="title">
+            <div className="title__text-box">
                 <div className="heading-primary heading-primary--main">
                     Flow
                 </div>
@@ -16,4 +16,4 @@ function Banner() {
     );
 }
 
-export default Banner;
+export default Title;

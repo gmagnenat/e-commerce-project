@@ -87,7 +87,7 @@
     .header__option {
         display: flex;
         flex-direction: column;
-        margin-left: 1.1rem;
+        margin-left: 1.3rem;
         margin-right: 0.6rem;
         color: white;
     }
@@ -105,7 +105,8 @@
     .header__optionBasket {
         display: flex;
         position: relative;
-        margin-right: 2.4rem;
+        margin-right: 3rem;
+        margin-left: 1rem;
         align-items: center;
         color: white;
     }
@@ -135,6 +136,7 @@
         height: 1rem;
         padding: 1rem;
         border: none;
+        -webkit-appearance: none;
         width: 80%;
     }
 

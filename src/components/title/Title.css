@@ -1,26 +1,18 @@
-.banner {
-    height: 75vh;
-    background-image: linear-gradient(rgb(0, 115, 255), rgb(207, 217, 223)),
-        url('./images/slide-1.jpg');
-    background-size: cover;
-    background-position: center;
+.title {
     position: relative;
 }
 
-.banner__text-box {
-    position: absolute;
-    top: 34%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.title__text-box {
+    position: relative;
     text-align: center;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
 }
 
 .heading-primary {
     color: white;
     text-transform: uppercase;
-
     backface-visibility: hidden;
-    margin-bottom: 6rem;
 }
 
 .heading-primary--main {
@@ -28,6 +20,7 @@
     font-size: 7rem;
     font-weight: 700;
     margin-left: 2rem;
+    margin-bottom: 5rem;
     letter-spacing: 5rem;
 
     animation: moveInLeft 1s ease-out;
@@ -75,17 +68,20 @@
 }
 
 @media (max-width: 37.5em) {
-    .banner {
-        height: 65vh;
+    .title {
+        margin-top: 5rem;
     }
-    .banner__text-box {
-        top: 24%;
+
+    .title__text-box {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
     }
 
     .heading-primary--main {
         margin: 0;
+        margin-bottom: 3rem;
         display: block;
-        font-size: 3rem;
+        font-size: 4rem;
         font-weight: 700;
         margin-left: 2rem;
         letter-spacing: 4rem;
@@ -95,6 +91,6 @@
     .heading-primary--sub {
         margin-top: 1rem;
         font-size: 1rem;
-        letter-spacing: 1.1;
+        letter-spacing: 0.5rem;
     }
 }

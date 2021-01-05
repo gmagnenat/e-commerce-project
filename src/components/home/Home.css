@@ -1,6 +1,5 @@
 .home {
     position: relative;
-    top: -30rem;
     display: flex;
     justify-content: center;
     margin-left: auto;
@@ -24,10 +23,9 @@
 }
 
 @media (max-width: 37.5em) {
-    .home__container {
-        margin-top: 4rem;
+    .home {
+        display: block;
     }
-
     .home__row {
         display: block;
         flex-direction: column;

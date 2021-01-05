@@ -1,7 +1,7 @@
 import React from 'react';
 import Product from '../product/Product';
 import shopData from '../../shop-data';
-import Banner from '../banner/Banner';
+import Banner from '../title/Title';
 import './Home.css';
 
 function Home() {

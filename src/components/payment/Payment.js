@@ -33,7 +33,6 @@ function Payment() {
                         getBasketTotal(basket) * 100
                     }`,
                 });
-                console.log('The response >>>>>', response);
                 setClientSecret(response.data.clientSecret);
             } catch (err) {
                 console.error(err);

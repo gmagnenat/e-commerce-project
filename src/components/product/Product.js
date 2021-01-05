@@ -2,7 +2,7 @@ import React from 'react';
 import StarIcon from '@material-ui/icons/Star';
 import Button from '@material-ui/core/Button';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
-import './Product.scss';
+import './Product.css';
 import { useStateValue } from '../../StateProvider';
 
 function Product({ id, title, image, price, rating, description, category }) {

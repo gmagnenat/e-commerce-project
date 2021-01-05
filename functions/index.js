@@ -2,7 +2,7 @@ const functions = require('firebase-functions');
 const express = require('express');
 const cors = require('cors');
 const stripe = require('stripe')(
-    'sk_test_51I5fj1Af7QGlqNWP6ughnglFP2u5QPCOu2EKjrZwiivbwac1DtOjvUXugGuYmQ573csRa5K4VnQZDazvPF6OsIB600SnH7C4cH'
+    <<<< PRIVATE STRIPE API KEY HERRE >>>>
 );
 
 // API

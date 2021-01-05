@@ -1,0 +1,33 @@
+.orders {
+    padding: 2rem 5rem;
+}
+
+.orders .checkoutProduct {
+    padding: inherit 20px;
+}
+
+.orders > h1 {
+    margin: 30px 0;
+}
+
+.orders .checkoutProduct__image {
+    width: 80px;
+}
+
+.orders .checkoutProduct__title {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.orders .checkoutProduct__price {
+    font-size: 1.5rem;
+}
+
+.orders .checkoutProduct__info > button {
+    margin: 0;
+}
+
+.order__total {
+    margin: 2rem 0 0 0;
+    font-size: 2rem;
+}

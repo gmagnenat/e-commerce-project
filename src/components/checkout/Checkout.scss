@@ -3,11 +3,14 @@
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background-color: white;
     height: max-content;
 
     &__left {
         width: 60%;
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 0.5rem 1rem rgba(39, 39, 39, 0.2);
     }
 
     &__title {

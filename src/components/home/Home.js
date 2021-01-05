@@ -2,7 +2,7 @@ import React from 'react';
 import Product from '../product/Product';
 import shopData from '../../shop-data';
 import Banner from '../banner/Banner';
-import './Home.scss';
+import './Home.css';
 
 function Home() {
     const sliceData = (shopData, start, end) => {

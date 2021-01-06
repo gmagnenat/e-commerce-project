@@ -61,6 +61,20 @@
     &__image {
         object-fit: contain;
         width: 120px;
-        // height: 180px;
+    }
+}
+
+@media (max-width: 37.5em) {
+    .checkoutProduct__title {
+        font-size: 1.5rem;
+        padding-right: 2rem;
+    }
+
+    .checkoutProduct__info {
+        font-size: 1.3rem;
+    }
+
+    .checkoutProduct__info > button {
+        margin-bottom: 1rem;
     }
 }

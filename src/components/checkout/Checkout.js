@@ -1,6 +1,5 @@
 import React from 'react';
-import './Checkout.scss';
-import FlipMove from 'react-flip-move';
+import './Checkout.css';
 import Subtotal from '../subtotal/Subtotal';
 import CheckoutProduct from '../checkoutProduct/CheckoutProduct';
 import { useStateValue } from '../../StateProvider';
